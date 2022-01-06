@@ -1,5 +1,4 @@
 #include <iostream>
-#include <locale>
 
 using namespace std;
 
@@ -9,9 +8,9 @@ int main(int argc, char** argv) {
 	
 	cout << "Insira o tamanho da fila: ";
 	cin >> tamanho;
-	int fila[tamanho]; //tamanho da fila determinado pelo usuário
+	int fila[tamanho]; //tamanho da fila determinado pelo usuÃ¡rio
 	
-	for (int i = 1; i <= tamanho; i++){ //preenchimento de todas as posições
+	for (int i = 1; i <= tamanho; i++){ //preenchimento de todas as posiÃ§Ãµes
 		cout << "Insira o elemento da posicao " << i << " da fila: ";
 		cin >> fila[i];
 	}
@@ -25,14 +24,14 @@ int main(int argc, char** argv) {
 		cin >> opcaoMenu;
 		
 		if (opcaoMenu == 1){
-			if (fila[tamanho] == 0){ //apenas caso a última posição da fila esteja vazia
+			if (fila[tamanho] == 0){ //apenas caso a Ãºltima posiÃ§Ã£o da fila esteja vazia
 				cout << "Insira o proximo elemento: ";
 				cin >> proximo;
 				for (int i = 1; i <= tamanho; i++){ //passa por toda fila
-					if (fila[i] == 0){ //preenche a primeira posição vazia encontrada
+					if (fila[i] == 0){ //preenche a primeira posiÃ§Ã£o vazia encontrada
 					fila[i] = proximo;
 					cout << "Elemento adicionado." << endl;
-					break; //para sair do laço após a primeira inserção
+					break; //para sair do laÃ§o apÃ³s a primeira inserÃ§Ã£o
 					} 
 				}
 			} else {
@@ -43,7 +42,7 @@ int main(int argc, char** argv) {
 				for (int i = 1; i <= tamanho; i++){ //passa por toda fila
 				fila[i] = fila[i+1]; //faz o atual elemento receber o valor do elemento seguinte
 				}
-				fila[tamanho] = 0; //determina o último elemento como sendo 0
+				fila[tamanho] = 0; //determina o Ãºltimo elemento como sendo 0
 				cout << "Elemento removido." << endl;
 			} else {
 				cout << "Fila vazia." << endl;
@@ -57,7 +56,7 @@ int main(int argc, char** argv) {
 			cout << endl;
 		} else if (opcaoMenu == 4){
 			cout << "Fim da execucao" << endl;
-		} else{ 
+		} else { 
 			cout << "Opcao invalida." << endl;
 		}
 	} while (opcaoMenu != 4); 
